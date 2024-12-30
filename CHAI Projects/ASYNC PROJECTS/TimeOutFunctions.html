@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout Functions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" id="home">Home</a>
+        <a href="https://twitter.com/Prajapatiamitap" id="x" target="_blank">Twitter Account</a>
+        <div class="colors">
+            <span class="button" id="black">Dark Mode</span>
+            <span class="button" id="white">Light Mode</span>
+        </div>
+    </nav>
+    <h1>Amit ki Coding</h1>
+    <button id="stop">Stop</button>
+    <script src="script.js"></script>
+    <script>
+        const sayName = () => {
+            console.log("Amit Prajapati");
+        };
+        const changeText = () => {
+            document.querySelector("h1").innerHTML = "Best Coder Of The World";
+        }
+        setTimeout(sayName, 2000);
+        const changeMe = setTimeout(changeText, 2000);
+
+        document.querySelector("#stop").addEventListener("click",() => {
+            clearTimeout(changeMe);
+            console.log("Stopped");
+        })
+    </script>
+</body>
+</html>
