@@ -7,6 +7,14 @@
 body {
     background: linear-gradient(90deg,rgb(136, 0, 255),rgb(0, 117, 128));
 }
+.whether-head {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: underline;
+}
 .card {
     width: 90%;
     max-width: 470px;
