@@ -142,6 +142,7 @@ body {
 @media screen and (max-width: 1448px) {
     .code-editor-container{
         flex-direction: row;
+        margin-bottom: 50px;
     }
     .code-editor {
         width: 100%;

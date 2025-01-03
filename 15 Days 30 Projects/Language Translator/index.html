@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator - By AMit Prajapati</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cafca8990a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <textarea placeholder="Enter Text" id="input"></textarea>
+                <div class="controls">
+                    <div class="buttons">
+                        <i class="fa-solid fa-volume-high speaker"></i>
+                        <i class="fa-regular fa-copy copy input"></i>
+                    </div>
+                    <select name="language" id="input-select"></select>
+                </div>
+            </div>
+            <div class="card">
+                <textarea placeholder="Translated Text" id="output"></textarea>
+                <div class="controls">
+                    <div class="buttons">
+                        <i class="fa-solid fa-volume-high speaker"></i>
+                        <i class="fa-regular fa-copy copy output"></i>
+                    </div>
+                    <select name="language" id="output-select"></select>
+                </div>
+            </div>
+        </div>
+        <button class="translate">Translate</button>
+    </div>
+    <script src="langs.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -136,7 +136,6 @@ const initApp = () => {
         then(response => response.json()).
         then(data => {
             listProducts = data;
-            console.log(listProducts);
             addDataToHTML();
             if (localStorage.getItem("cart")) {
                 carts = JSON.parse(localStorage.getItem("cart"));
