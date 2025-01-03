@@ -8,7 +8,7 @@
 }
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .code-editor-container {
     width: 100%;
@@ -82,7 +82,7 @@ body {
 }
 .output-container {
     width: 100%;
-    height: 30%;
+    height: 8%;
     box-shadow: 2px -4px 10px rgb(57, 129, 135);
     color: #dbdbdb;
     font-size: 20px;
@@ -120,7 +120,11 @@ body {
     transition: all 0.5s ease;
     height: 100%;
 }
-#full {
+.output-mid-active {
+    transition: all 0.5s ease;
+    height: 30%;
+}
+.resizer {
     transition: all 1s ease;
 }
 .html-input::selection {
@@ -129,4 +133,17 @@ body {
 .js-input::selection {
     background-color: yellow;
     color: black;
+}
+@media screen and (min-width: 1448px) {
+    body {
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 1448px) {
+    .code-editor-container{
+        flex-direction: row;
+    }
+    .code-editor {
+        width: 100%;
+    }
 }

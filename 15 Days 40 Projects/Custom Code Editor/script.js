@@ -5,6 +5,7 @@ let outputContainer = document.querySelector('.output-container');
 let output = document.querySelector('#output');
 let save = document.querySelector('#save');
 let fullScreen = document.querySelector("#full");
+let midScreen = document.querySelector("#mid");
 let copy = document.querySelectorAll(".copy");
 
 save.addEventListener('click', function () {
@@ -15,10 +16,24 @@ save.addEventListener('click', function () {
 
 fullScreen.addEventListener('click', function () {
     outputContainer.classList.toggle('output-full-active');
+    if (outputContainer.classList.contains('output-mid-active')) {
+        outputContainer.classList.toggle('output-mid-active');
+    }
     if (outputContainer.classList.contains('output-full-active')) {
         fullScreen.style.transform = "rotate(180deg)";
     } else {
         fullScreen.style.transform = "rotate(0deg)";
+    }
+});
+midScreen.addEventListener('click', function () {
+    outputContainer.classList.toggle('output-mid-active');
+    if (outputContainer.classList.contains('output-full-active')) {
+        outputContainer.classList.toggle('output-full-active');
+    }
+    if (outputContainer.classList.contains('output-mid-active')) {
+        midScreen.style.transform = "rotate(180deg)";
+    } else {
+        midScreen.style.transform = "rotate(0deg)";
     }
 });
 
