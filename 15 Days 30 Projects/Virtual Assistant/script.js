@@ -14,7 +14,6 @@ button.addEventListener("click", () => {
 recognition.onresult = (event) => {
     let currentIndex = event.resultIndex;
     let transcript = event.results[currentIndex][0].transcript;
-    content.textContent = transcript;
     takeCommand(transcript.toLowerCase());
 };
 
@@ -32,7 +31,7 @@ function takeCommand(message) {
         window.open("https://www.youtube.com/");
     }
     else if (message.includes("open google")) {
-        speaking("Opening Youtube");
+        speaking("Opening Google");
         window.open("https://www.google.com/");
     }
     else if (message.includes("open calculator")) {
@@ -82,5 +81,7 @@ function wishMe() {
 }
 
 window.addEventListener("load", () => {
-    wishMe();
+    setTimeout(() => {
+        wishMe();
+    }, 1);
 });
