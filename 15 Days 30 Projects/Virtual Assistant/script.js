@@ -20,11 +20,14 @@ recognition.onresult = (event) => {
 function takeCommand(message) {
     button.style.display = "flex";
     voice.style.display = "none";
-    if (message.includes("hello") || message.includes("hey") || message.includes("hi")) {
+    if (message.includes("hello") || message.includessage.includes("hi")) {s("hey") || me
         speaking("Hi, What can I Help You?");
     }
     else if (message.includes("who are you")) {
-        speaking("I am virtual assistent, Created by Amit Prajapati");
+        speaking("mey ek virtual assistant hoon, mujhe Amit Prajapati ji ne banaya hai");
+    }
+    else if (message.includes("who is amit")) {
+        speaking("Amit prajapati ji ek mahan vyakti hai jinhone mujhe apni coding ki kaushalta se banaya hai. Agar aaj vo na hote to mera bhi yaha koi vajood nahi hota, Dhanyavaad Amit Prajapati ji.");
     }
     else if (message.includes("open youtube")) {
         speaking("Opening Youtube");
@@ -51,7 +54,7 @@ function takeCommand(message) {
         speaking(date);
     }
     else {
-        let finalText = "This is what i found regarding" + message.replace("ana", "") + message.replace("anna", "");
+        let finalText = "Jo hookum mere aaka, me dhoond rahi hoon" + (message.replace("ana", "") || message.replace("anna", "")) + "ke baare me";
         speaking(finalText);
         window.open(`https://www.google.com/search?q=${message}`);
     }
@@ -70,13 +73,13 @@ function wishMe() {
     let date = new Date();
     let hours = date.getHours();
     if (hours >= 0 && hours < 12) {
-        speaking("Good Morning, How Can I Help You?");
+        speaking("Good Morning, me aapki kis prakar ki seva kar sakti hoon? kripaya mujhe hookum dijiye");
     }
     else if (hours >= 12 && hours < 16) {
-        speaking("Good Afternonn, How Can I Help You?");
+        speaking("Good Afternoon, me aapki kis prakar ki seva kar sakti hoon? kripaya mujhe hookum dijiye");
     }
     else {
-        speaking("Good Evening, How Can I Help You?");
+        speaking("Good Evening, me aapki kis prakar ki seva kar sakti hoon? kripaya mujhe hookum dijiye");
     }
 }
 
