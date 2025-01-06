@@ -3,7 +3,7 @@ let currQuestionIndex = 0;
 let score = 0;
 let questions = [];
 async function generateRandomQuestions() {
-    let response = await fetch(`https://opentdb.com/api.php?amount=10&category=18&type=multiple`);
+    let response = await fetch(`https://opentdb.com/api.php?amount=3&category=18&type=multiple`);
     let data = await response.json();
     let questionsArray = data.results;
     const newPromise = new Promise((resolve) => {
@@ -36,7 +36,6 @@ function creatingQuestion(quesArr) {
         }
         ques.answer = ansArr;
         questions.push(ques);
-        console.log(questions);
     }
 }
 
