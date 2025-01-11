@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator - By AMit Prajapati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="generating-box">
+            <h1>AI Image Generator Tool JavaScript</h1>
+            <p>Convert your text into an image within a second using this JavaScript-powered AI Image Generator tool.</p>
+            <form class="generate-form">
+                <input type="text" name="quary" id="quary" placeholder="Describe what you want to see" required>
+                <div class="controls">
+                    <select name="Quantity" class="quantity">
+                        <option value="1">1 Image</option>
+                        <option value="2">2 Image</option>
+                        <option value="3">3 Image</option>
+                        <option value="4" selected>4 Image</option>
+                    </select>
+                    <button class="generate-btn">Generate</button>
+                </div>
+            </form>
+        </div>
+        <div class="generated-box">
+            <div class="img-card">
+                <img src="images/img-1.jpg">
+                <a href="#">
+                    <img src="images/download.svg">
+                </a>
+            </div>
+            <div class="img-card">
+                <img src="images/img-2.jpg">
+                <a href="#">
+                    <img src="images/download.svg">
+                </a>
+            </div>
+            <div class="img-card">
+                <img src="images/img-3.jpg">
+                <a href="#">
+                    <img src="images/download.svg">
+                </a>
+            </div>
+            <div class="img-card">
+                <img src="images/img-4.jpg">
+                <a href="#">
+                    <img src="images/download.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
