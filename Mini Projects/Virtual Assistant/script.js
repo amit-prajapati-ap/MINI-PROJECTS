@@ -13,6 +13,7 @@ button.addEventListener("click", () => {
 
 recognition.onresult = (event) => {
     let currentIndex = event.resultIndex;
+    console.log(currentIndex);
     let transcript = event.results[currentIndex][0].transcript;
     takeCommand(transcript.toLowerCase());
 };

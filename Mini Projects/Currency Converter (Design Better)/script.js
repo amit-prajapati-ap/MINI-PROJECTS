@@ -1,4 +1,12 @@
 const apiKey = "cur_live_SaBDOWfMeDGgbepQiEDBcaCLiSHFaYrgVCbewmAG";
+
+
+
+
+
+
+
+
 const btn = document.querySelector(".btn");
 const tableBody = document.querySelector("tbody");
 const url = `https://api.currencyapi.com/v3/latest?apikey=${apiKey}&base_currency=`;
