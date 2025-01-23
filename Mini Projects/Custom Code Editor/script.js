@@ -50,3 +50,5 @@ copy.forEach((e) => {
         }
     })
 })
+
+console.log(output);
